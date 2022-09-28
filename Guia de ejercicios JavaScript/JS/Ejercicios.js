@@ -38,4 +38,8 @@ function imc()
 
     imcR = Math.round(peso / (Math.pow(h,2)));
     document.getElementById('txtresp').value = `Su IMC es de ${imcR} kg/m`;
+
+    //limpiamos txt
+    document.getElementById('peso').value = "";
+    document.getElementById('altura').value = "";
 }

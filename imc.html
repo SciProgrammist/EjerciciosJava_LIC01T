@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Calculo de IMC</title>
+        <meta charset="utf-8"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="Guia de ejercicios JavaScript/JS/Ejercicios.js"></script>
+
+        <style>
+            body{
+                background-image: url("Guia de ejercicios JavaScript/img/back.jpg");
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <div class="container-fluid bg-primary">
+                <div class="row">
+                    <h1 class="display-2 text-center text-black mb-2">Calcular IMC (Indice de Masa Corporal)</h1>
+                </div>
+            </div>
+        </header>
+
+        <br><br>
+
+        <div name="detras">
+
+        <div class="container bg-dark p-5">
+
+            <div class="row position-relative">
+                
+                <div class="input-group mb-3" name="num1">
+                    <span class="input-group-text">Ingrese su peso (Kg)</span>
+                    <input type="text" id="peso" autofocus class="form-control" 
+                    placeholder="Peso en kilogramos">
+                </div>   
+                <div class="input-group mb-3" name="num2">
+                    <span class="input-group-text">Ingrese su altura (metros)</span>
+                    <input type="text" id="altura" autofocus class="form-control" 
+                    placeholder="Altura en metros">
+                </div>
+                
+                <input class="btn btn-outline-primary mb-4" type="button" value="Obtener mi IMC" onClick="javascript:imc()">
+               
+                <input type="text" id="txtresp" class="input-group-text mb-4" 
+                placeholder="Aquí se mostrará el resultado" disabled>
+
+                <input class="btn btn-outline-warning" type="button" value="Regresar" onClick="location.href='Ejercicio6.html'">
+            </div>
+        </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,13 @@
+#menu a{
+    text-decoration: none;
+    color:white;
+}
+
+a:hover div{
+    background-color: rgb(87, 87, 87);
+}
+
+html{
+    min-height: 100vh;
+}
+

@@ -1,4 +1,63 @@
 
+// JS del Ejercicio 2
+
+function valores() {
+    let lunes = document.getElementById("lunes").value;
+    let martes = document.getElementById("martes").value;
+    let miercoles = document.getElementById("miercoles").value;
+    let jueves = document.getElementById("jueves").value;
+    let viernes = document.getElementById("viernes").value;
+    let sabado = document.getElementById("sabado").value;
+    let domingo = document.getElementById("domingo").value;
+
+    if (lunes != "" && martes != "" && miercoles != "" && jueves != "" && viernes != "" && sabado != "" && domingo != "") {
+
+        let arregloTemperaturas = new Array();
+        arregloTemperaturas.push(new Array("lunes", Number(lunes)));
+        arregloTemperaturas.push(new Array("martes", Number(martes)));
+        arregloTemperaturas.push(new Array("miércoles", Number(miercoles)));
+        arregloTemperaturas.push(new Array("jueves", Number(jueves)));
+        arregloTemperaturas.push(new Array("viernes", Number(viernes)));
+        arregloTemperaturas.push(new Array("sábado", Number(sabado)));
+        arregloTemperaturas.push(new Array("domingo", Number(domingo)));
+
+        mayor(arregloTemperaturas);
+        menor(arregloTemperaturas);
+    }
+    else {
+        alert('Debe llenar todos los campos');
+    }
+}
+function mayor(arregloTemperaturas) {
+    let mayor = 0;
+    let dia = "";
+
+    for (var i = 0; i < arregloTemperaturas.length; i++) {
+        if (arregloTemperaturas[i][1] > mayor) {
+            mayor = arregloTemperaturas[i][1];
+            dia = arregloTemperaturas[i][0];
+        }
+
+    }
+
+    document.getElementById("mayor").innerHTML = `El día más caliente fue el ${dia} con ${mayor}°C`;
+}
+
+function menor(arregloTemperaturas){
+    let menor = 1000000000;
+    let dia = "";
+
+    for (var i = 0; i < arregloTemperaturas.length; i++) {
+        if (arregloTemperaturas[i][1] < menor) {
+            menor = arregloTemperaturas[i][1];
+            dia = arregloTemperaturas[i][0];
+        }
+
+    }
+
+    document.getElementById("menor").innerHTML = `El día más frío fue el ${dia} con ${menor}°C`;
+}
+
 
 //JS del Ejercicio 3
 
@@ -129,67 +188,32 @@ function validar(valido){
          }
 
 
-// JS del Ejercicio 2
-
-
-function valores() {
-    let lunes = document.getElementById("lunes").value;
-    let martes = document.getElementById("martes").value;
-    let miercoles = document.getElementById("miercoles").value;
-    let jueves = document.getElementById("jueves").value;
-    let viernes = document.getElementById("viernes").value;
-    let sabado = document.getElementById("sabado").value;
-    let domingo = document.getElementById("domingo").value;
-
-    if (lunes != "" && martes != "" && miercoles != "" && jueves != "" && viernes != "" && sabado != "" && domingo != "") {
-
-        let arregloTemperaturas = new Array();
-        arregloTemperaturas.push(new Array("lunes", Number(lunes)));
-        arregloTemperaturas.push(new Array("martes", Number(martes)));
-        arregloTemperaturas.push(new Array("miércoles", Number(miercoles)));
-        arregloTemperaturas.push(new Array("jueves", Number(jueves)));
-        arregloTemperaturas.push(new Array("viernes", Number(viernes)));
-        arregloTemperaturas.push(new Array("sábado", Number(sabado)));
-        arregloTemperaturas.push(new Array("domingo", Number(domingo)));
-
-        mayor(arregloTemperaturas);
-        menor(arregloTemperaturas);
-    }
-    else {
-        alert('Debe llenar todos los campos');
-    }
-}
-function mayor(arregloTemperaturas) {
-    let mayor = 0;
-    let dia = "";
-
-    for (var i = 0; i < arregloTemperaturas.length; i++) {
-        if (arregloTemperaturas[i][1] > mayor) {
-            mayor = arregloTemperaturas[i][1];
-            dia = arregloTemperaturas[i][0];
-        }
-
-    }
-
-    document.getElementById("mayor").innerHTML = `El día más caliente fue el ${dia} con ${mayor}°C`;
-}
-
-function menor(arregloTemperaturas){
-    let menor = 1000000000;
-    let dia = "";
-
-    for (var i = 0; i < arregloTemperaturas.length; i++) {
-        if (arregloTemperaturas[i][1] < menor) {
-            menor = arregloTemperaturas[i][1];
-            dia = arregloTemperaturas[i][0];
-        }
-
-    }
-
-    document.getElementById("menor").innerHTML = `El día más frío fue el ${dia} con ${menor}°C`;
-}
-
 //JS del Ejercicio 4
+function InsertionSort()
+{
+    var ascArray = new Array();
+    ascArray[0] = Number(document.getElementById('numberx').value);
+    ascArray[1] = Number(document.getElementById('numbery').value);
+    ascArray[2] = Number(document.getElementById('numberz').value);
+    //The first loop helps us to fix the first element of the array and get the sorted part.
+    for (let current = 1; current < ascArray.length;current++)
+        {
+            //Between this for loop will have to start to shrink the unsorted part of the array
+            let Check = current;
+            while((Check>0)&&(ascArray[Check]<ascArray[Check-1]))
+                {
+                    let swap = ascArray[Check-1];
+                    ascArray[Check-1]= ascArray[Check];
+                    ascArray[Check]=swap;
+                    Check--;
+                }
+            
+    
+        }
+    
+    document.getElementById('txtOrdenado').value = ascArray.toString();
+    
+}
 
 //JS de Ejercicio 6
 function abreSitio() {

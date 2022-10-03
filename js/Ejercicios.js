@@ -231,3 +231,92 @@ function imc() {
     document.getElementById('peso').value = "";
     document.getElementById('altura').value = "";
 }
+
+//js ejercicio 1
+function Ins_Sort()
+{
+   let Nota1 = document.getElementById("Nota1").value; 
+     let Nota2 = document.getElementById("Nota2").value;
+     let Nota3 = document.getElementById("Nota3").value;
+     let Nota4 = document.getElementById("Nota4").value;
+     let Nota5 = document.getElementById("Nota5").value;
+     let Nota6 = document.getElementById("Nota6").value;
+     let Nota7 = document.getElementById("Nota7").value;
+     let Nota8 = document.getElementById("Nota8").value;
+     let Nota9 = document.getElementById("Nota9").value;
+     let Nota10 = document.getElementById("Nota10").value;
+    
+  var i =0;
+    
+    if (Nota1==8.5)
+        {
+          i=i+1;  
+        }
+     if (Nota2==8.5)
+        {
+          i=i+1;  
+        }
+    if (Nota3==8.5)
+        {
+          i=i+1;  
+        }
+    if (Nota4==8.5)
+        {
+          i=i+1;  
+        }
+    if (Nota5==8.5)
+        {
+          i=i+1;  
+        }
+    if (Nota6==8.5)
+        {
+          i=i+1;  
+        }
+    if (Nota7==8.5)
+        {
+          i=i+1;  
+        }
+    if (Nota8==8.5)
+        {
+          i=i+1;  
+        }
+    if (Nota9==8.5)
+        {
+          i=i+1;  
+        }
+    if (Nota10==8.5)
+        {
+          i=i+1;  
+        }
+    
+ 
+       
+  document.getElementById("sort").innerHTML = ` 8.5 se repite ${i} veces`;  
+}
+
+function limpiar()
+{
+    document.getElementById("Nota1").value="";
+    document.getElementById("Nota2").value="";
+    document.getElementById("Nota3").value="";
+    document.getElementById("Nota4").value="";
+    document.getElementById("Nota5").value="";
+    document.getElementById("Nota6").value="";
+    document.getElementById("Nota7").value="";
+    document.getElementById("Nota8").value="";
+document.getElementById("Nota9").value="";
+    document.getElementById("Nota10").value="";
+    document.getElementById("sort").innerHTML = ``;   
+    
+}
+
+// js ejercicio 5
+function Perimetro()
+{
+    let lado = document.getElementById("medida").value; 
+    var resultado;
+    resultado=4*lado;
+    document.getElementById("TotalPeri").innerHTML = `El perimetro del cuadrado es ${resultado} cm`;
+    
+}
+

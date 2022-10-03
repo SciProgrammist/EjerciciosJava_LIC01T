@@ -49,12 +49,35 @@
 
     </nav>
     <div class="col-10">
-
-        <!--TU CODIGO AQUI-->
         <!--Crear una función a la cual le envíe tres enteros y los muestre ordenados de menor a mayor-->
 
+        <div class="container-fluid bg-light p-4">
+            <h1 class="text-center text-warning">Ordenamiento de numeros</h1>
+            <p class="fs-4 text-center">Por favor ingresa los 3 numeros a ordenar.</p>
+
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <input type="number" id="numberx" class="form-control Ejerx" placeholder="Primer numero">
+                    </div>
+                    <div class="col">
+                        <input type="number" id="numbery" class="form-control Ejery" placeholder="Segundo numero">
+                    </div>
+                    <div class="col">
+                        <input type="number" id="numberz" class="form-control Ejerz" placeholder="Tercer numero">
+                    </div>
+                </div>
+                <br>
+                <div class="col">
+                    <button type="button" id="bt_sort" class="btn btn-primary" onclick="InsertionSort()">
+                        Ordena
+                    </button>
+                </div>
+                <br>
+                  <input type="text" id="txtOrdenado" class="input-group-text " 
+                placeholder="Resultado..." disabled>
+            </form>
+        </div>
     </div>
 
-</body>
-
-</html>
+</body></html>

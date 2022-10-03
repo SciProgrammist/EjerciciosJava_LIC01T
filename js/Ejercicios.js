@@ -189,6 +189,8 @@ function menor(arregloTemperaturas){
     document.getElementById("menor").innerHTML = `El día más frío fue el ${dia} con ${menor}°C`;
 }
 
+//JS del Ejercicio 4
+
 //JS de Ejercicio 6
 function abreSitio() {
     var web = document.form1.sitio.options[document.form1.sitio.selectedIndex].value;
